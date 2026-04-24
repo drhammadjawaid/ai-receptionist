@@ -72,11 +72,12 @@ export default function PricingSection() {
     return () => clearInterval(timer);
   }, []);
 
-  // 🟢 STEP 1 — CLICK HANDLER (plan select)
+  // 🟢 FINAL CLICK ACTION (WHATSAPP LEAD FUNNEL)
   const handleSelectPlan = (plan: any) => {
-    alert(`You selected: ${plan.name}`);
-    // Future upgrade options:
-    // window.open("https://wa.me/92300XXXXXXX?text=I want " + plan.name);
+    const phone = "92300XXXXXXX"; // 👉 replace with YOUR number
+    const message = `Hi, I am interested in the ${plan.name} plan for AI receptionist.`;
+
+    window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, "_blank");
   };
 
   const formatTime = (secs: number) => {
@@ -145,8 +146,6 @@ export default function PricingSection() {
         <div className="grid md:grid-cols-4 gap-6 items-stretch">
 
           {basePlans.map((plan, i) => (
-            
-            // 🟢 STEP 2 — CLICKABLE CARD WRAPPER
             <div
               key={i}
               onClick={() => handleSelectPlan(plan)}
@@ -201,7 +200,7 @@ export default function PricingSection() {
                   </ul>
                 </div>
 
-                {/* 🟢 STEP 3 — CLICKABLE BUTTON */}
+                {/* BUTTON */}
                 <button
                   onClick={() => handleSelectPlan(plan)}
                   className={`mt-auto w-full py-2 rounded-xl font-medium transition ${
