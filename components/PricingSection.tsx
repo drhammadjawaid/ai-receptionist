@@ -92,45 +92,45 @@ export default function PricingSection() {
   };
 
   return (
-    <div className="min-h-screen bg-white py-16 px-6">
+    <div className="min-h-screen bg-black text-white py-16 px-6">
       <div className="max-w-6xl mx-auto text-center">
 
         {/* HEADER */}
-        <h1 className="text-4xl font-bold mb-3">
+        <h1 className="text-4xl font-bold mb-3 text-white">
           Ready to scale your patient flow?
         </h1>
 
-        <p className="text-gray-500 mb-2">
+        <p className="text-gray-300 mb-2">
           AI receptionist that never misses a call
         </p>
 
-        <p className="text-sm text-gray-600 mb-1">
-          🎉 <b>Free setup (limited time)</b> — Save $149 onboarding fee
+        <p className="text-sm text-gray-400 mb-1">
+          🎉 <b className="text-white">Free setup (limited time)</b> — Save $149 onboarding fee
         </p>
 
-        <p className="text-red-500 text-xs mb-8">
+        <p className="text-red-400 text-xs mb-8">
           ⏳ Offer ends in {formatTime(timeLeft)}
         </p>
 
         {/* TOGGLE */}
         <div className="flex justify-center items-center gap-3 mb-12">
-          <span className={!annual ? "font-semibold" : "text-gray-400"}>
+          <span className={!annual ? "font-semibold text-white" : "text-gray-500"}>
             Monthly
           </span>
 
           <button
             onClick={() => setAnnual(!annual)}
-            className="w-12 h-6 bg-gray-200 rounded-full relative"
+            className="w-12 h-6 bg-gray-700 rounded-full relative"
           >
             <div
-              className={`h-6 w-6 bg-black rounded-full absolute top-0 transition-all ${
+              className={`h-6 w-6 bg-white rounded-full absolute top-0 transition-all ${
                 annual ? "left-6" : "left-0"
               }`}
             />
           </button>
 
-          <span className={annual ? "font-semibold" : "text-gray-400"}>
-            Annual <span className="text-green-600">(Save 20%)</span>
+          <span className={annual ? "font-semibold text-white" : "text-gray-500"}>
+            Annual <span className="text-green-400">(Save 20%)</span>
           </span>
         </div>
 
@@ -142,36 +142,39 @@ export default function PricingSection() {
               key={i}
               className={`relative rounded-2xl p-[2px] ${
                 plan.highlight
-                  ? "bg-gradient-to-r from-black via-gray-500 to-black"
-                  : "bg-gray-200"
+                  ? "bg-gradient-to-r from-white/30 via-white/10 to-white/30"
+                  : "bg-white/10"
               }`}
             >
 
               {/* MOST POPULAR */}
               {plan.highlight && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-black text-white text-xs px-3 py-1 rounded-full">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-white text-black text-xs px-3 py-1 rounded-full font-semibold">
                   Most Popular
                 </div>
               )}
 
               {/* CARD */}
-              <div className="h-full bg-white rounded-2xl p-6 flex flex-col shadow-sm hover:shadow-md transition">
+              <div className="h-full bg-black border border-white/10 rounded-2xl p-6 flex flex-col shadow-lg hover:shadow-xl transition">
 
                 <div>
-                  <h2 className="text-lg font-semibold">{plan.name}</h2>
-                  <p className="text-sm text-gray-500 mb-4">
+                  <h2 className="text-lg font-semibold text-white">
+                    {plan.name}
+                  </h2>
+
+                  <p className="text-sm text-gray-400 mb-4">
                     {plan.description}
                   </p>
 
                   {/* PRICE */}
                   <div className="mb-4">
                     {plan.original && !annual && (
-                      <span className="line-through text-gray-400 mr-2">
+                      <span className="line-through text-gray-500 mr-2">
                         ${plan.original}
                       </span>
                     )}
 
-                    <span className="text-3xl font-bold">
+                    <span className="text-3xl font-bold text-white">
                       {getPrice(plan)}
                     </span>
 
@@ -181,7 +184,7 @@ export default function PricingSection() {
                   </div>
 
                   {/* FEATURES */}
-                  <ul className="text-sm text-gray-600 space-y-2 mb-6 text-left">
+                  <ul className="text-sm text-gray-300 space-y-2 mb-6 text-left">
                     {plan.features.map((f, idx) => (
                       <li key={idx}>• {f}</li>
                     ))}
@@ -190,10 +193,10 @@ export default function PricingSection() {
 
                 {/* BUTTON */}
                 <button
-                  className={`mt-auto w-full py-2 rounded-xl font-medium ${
+                  className={`mt-auto w-full py-2 rounded-xl font-medium transition ${
                     plan.highlight
-                      ? "bg-black text-white"
-                      : "bg-gray-100 hover:bg-gray-200"
+                      ? "bg-white text-black hover:bg-gray-200"
+                      : "bg-white/10 text-white hover:bg-white/20"
                   }`}
                 >
                   {plan.cta}
