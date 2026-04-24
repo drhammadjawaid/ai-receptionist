@@ -72,6 +72,13 @@ export default function PricingSection() {
     return () => clearInterval(timer);
   }, []);
 
+  // 🟢 STEP 1 — CLICK HANDLER (plan select)
+  const handleSelectPlan = (plan: any) => {
+    alert(`You selected: ${plan.name}`);
+    // Future upgrade options:
+    // window.open("https://wa.me/92300XXXXXXX?text=I want " + plan.name);
+  };
+
   const formatTime = (secs: number) => {
     const d = Math.floor(secs / (24 * 3600));
     const h = Math.floor((secs % (24 * 3600)) / 3600);
@@ -96,7 +103,7 @@ export default function PricingSection() {
       <div className="max-w-6xl mx-auto text-center">
 
         {/* HEADER */}
-        <h1 className="text-4xl font-bold mb-3 text-white">
+        <h1 className="text-4xl font-bold mb-3">
           Ready to scale your patient flow?
         </h1>
 
@@ -138,9 +145,12 @@ export default function PricingSection() {
         <div className="grid md:grid-cols-4 gap-6 items-stretch">
 
           {basePlans.map((plan, i) => (
+            
+            // 🟢 STEP 2 — CLICKABLE CARD WRAPPER
             <div
               key={i}
-              className={`relative rounded-2xl p-[2px] ${
+              onClick={() => handleSelectPlan(plan)}
+              className={`relative rounded-2xl p-[2px] cursor-pointer transition hover:scale-[1.03] ${
                 plan.highlight
                   ? "bg-gradient-to-r from-white/30 via-white/10 to-white/30"
                   : "bg-white/10"
@@ -191,8 +201,9 @@ export default function PricingSection() {
                   </ul>
                 </div>
 
-                {/* BUTTON */}
+                {/* 🟢 STEP 3 — CLICKABLE BUTTON */}
                 <button
+                  onClick={() => handleSelectPlan(plan)}
                   className={`mt-auto w-full py-2 rounded-xl font-medium transition ${
                     plan.highlight
                       ? "bg-white text-black hover:bg-gray-200"
@@ -201,6 +212,7 @@ export default function PricingSection() {
                 >
                   {plan.cta}
                 </button>
+
               </div>
             </div>
           ))}
