@@ -44,7 +44,7 @@ export default function LandingPage() {
       {/* HERO */}
       <div className="relative z-10 text-center mt-20 sm:mt-24 px-6">
 
-        <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight font-[Orbitron]">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
           Ready to scale your patient flow?
         </h2>
 
@@ -61,7 +61,7 @@ export default function LandingPage() {
             }}
             className="px-6 py-3 border border-white/20 rounded-xl text-white 
             hover:bg-white/10 transition 
-            shadow-md hover:shadow-[0_10px_30px_rgba(0,0,0,0.4)] 
+            shadow-md hover:shadow-[0_10px_40px_rgba(139,92,246,0.25)] 
             hover:-translate-y-0.5"
   
           >
@@ -73,7 +73,7 @@ export default function LandingPage() {
             target="_blank"
             className="px-6 py-3 border border-white/20 rounded-xl text-white 
             hover:bg-white/10 transition 
-            shadow-md hover:shadow-[0_10px_30px_rgba(0,0,0,0.4)] 
+            shadow-md hover:shadow-[0_10px_40px_rgba(139,92,246,0.25)]
             hover:-translate-y-0.5"
           >
             Watch How It Works
@@ -86,9 +86,9 @@ export default function LandingPage() {
       <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mt-24 px-6">
 
         {[
-          { title: "Auto Appointment Booking", desc: "Jaw handles booking, rescheduling, and cancellations instantly." },
-          { title: "Never Miss Calls", desc: "It answers every call 24/7." },
-          { title: "Smart Scheduling", desc: "It also Syncs with calendar in real-time." }
+          { title: "AUTO APPOINTMENT BOOKING", desc: "Jaw handles booking, rescheduling, and cancellations instantly." },
+          { title: "NEVER MISS CALLS", desc: "It answers every call 24/7." },
+          { title: "SMART SCHEDULING", desc: "It also Syncs with calendar in real-time." }
         ].map((f, i) => (
           <div
             key={i}
@@ -105,8 +105,8 @@ export default function LandingPage() {
           >
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-white/5 to-transparent pointer-events-none" />
 
-            <h3 className="text-lg font-semibold">{f.title}</h3>
-            <p className="text-gray-300 mt-2 text-sm">{f.desc}</p>
+            <h3 className="text-xl md:text-2xl font-semibold">{f.title}</h3>
+            <p className="text-gray-300 mt-3 text-base md:text-lg">{f.desc}</p>
           </div>
         ))}
 
