@@ -1,7 +1,101 @@
 "use client";
 
-import PricingSection from "../components/PricingSection";
+import React from "react";
+import PricingSection from "@/components/PricingSection";
 
-export default function Home() {
-  return <PricingSection />;
+export default function LandingPage() {
+  return (
+    <div className="min-h-screen bg-black text-white relative overflow-hidden">
+
+      {/* 🔮 Background Glow */}
+      <div className="absolute inset-0">
+        <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-purple-500 opacity-30 blur-[120px] rounded-full" />
+        <div className="absolute bottom-[-200px] right-[-100px] w-[500px] h-[500px] bg-blue-500 opacity-20 blur-[120px] rounded-full" />
+      </div>
+
+      {/* NAV */}
+      <div className="relative z-10 flex justify-between items-center px-10 py-6">
+        <h1 className="text-xl font-semibold tracking-tight">
+          AI Receptionist
+        </h1>
+
+        <button className="px-4 py-2 rounded-xl bg-white text-black text-sm font-medium hover:bg-gray-200 transition">
+          Book Demo
+        </button>
+      </div>
+
+      {/* HERO */}
+      <div className="relative z-10 text-center mt-20 px-6">
+        <h2 className="text-5xl md:text-6xl font-bold leading-tight">
+          Never miss a patient call again
+        </h2>
+
+        <p className="text-gray-300 mt-6 text-lg max-w-2xl mx-auto">
+          AI receptionist that answers calls, books appointments, and manages your clinic 24/7 — without human staff.
+        </p>
+
+        <div className="mt-10 flex justify-center gap-4">
+          <button className="px-6 py-3 bg-white text-black rounded-xl font-medium hover:bg-gray-200 transition">
+            Start Free Demo
+          </button>
+
+          <button className="px-6 py-3 border border-white/20 rounded-xl text-white hover:bg-white/10 transition">
+            Watch How It Works
+          </button>
+        </div>
+      </div>
+
+      {/* FEATURES */}
+      <div className="relative z-10 grid md:grid-cols-3 gap-6 max-w-6xl mx-auto mt-24 px-6">
+
+        {[
+          {
+            title: "Auto Appointment Booking",
+            desc: "AI handles booking, rescheduling, and cancellations instantly."
+          },
+          {
+            title: "Never Miss Calls",
+            desc: "Every call is answered even after clinic hours."
+          },
+          {
+            title: "Smart Scheduling",
+            desc: "Syncs directly with Google Calendar in real-time."
+          }
+        ].map((f, i) => (
+          <div
+            key={i}
+            className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl hover:bg-white/10 transition"
+          >
+            <h3 className="text-lg font-semibold">{f.title}</h3>
+            <p className="text-gray-400 mt-2 text-sm">{f.desc}</p>
+          </div>
+        ))}
+
+      </div>
+
+      {/* HOW IT WORKS */}
+      <div className="relative z-10 text-center mt-28 px-6">
+        <h2 className="text-3xl font-semibold">How it works</h2>
+
+        <div className="mt-10 max-w-3xl mx-auto text-gray-300 space-y-3 text-sm">
+          <p>1. Patient calls your clinic number</p>
+          <p>2. AI answers instantly (no missed calls)</p>
+          <p>3. Detects intent (book / cancel / reschedule)</p>
+          <p>4. Updates Google Calendar automatically</p>
+          <p>5. Sends confirmation to patient</p>
+        </div>
+      </div>
+
+      {/* PRICING SECTION (REAL COMPONENT) */}
+      <div className="relative z-10 mt-28">
+        <PricingSection />
+      </div>
+
+      {/* FOOTER */}
+      <div className="relative z-10 text-center text-gray-500 text-xs mt-32 pb-10">
+        © 2026 AI Receptionist. All rights reserved.
+      </div>
+
+    </div>
+  );
 }
