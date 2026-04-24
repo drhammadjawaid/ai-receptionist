@@ -19,11 +19,6 @@ export default function LandingPage() {
           AI Receptionist
         </h1>
 
-        <button className="px-4 py-2 rounded-xl bg-white text-black text-sm font-medium hover:bg-gray-200 transition">
-          Book Demo
-        </button>
-      </div>
-
       {/* HERO */}
       <div className="relative z-10 text-center mt-20 px-6">
         <h2 className="text-5xl md:text-6xl font-bold leading-tight">
@@ -42,10 +37,10 @@ export default function LandingPage() {
             href="mailto:yourgmail@gmail.com?subject=Demo Request - AI Receptionist&body=Hi, I want to book a demo."
             className="px-6 py-3 bg-white text-black rounded-xl font-medium hover:bg-gray-200 transition"
           >
-            Book a Demo
+            Book Demo
           </a>
 
-          {/* 2. START FREE DEMO → SCROLL */}
+          {/* 2. START NOW → SCROLL */}
           <button
             onClick={() => {
               const el = document.getElementById("pricing");
@@ -53,7 +48,7 @@ export default function LandingPage() {
             }}
             className="px-6 py-3 border border-white/20 rounded-xl text-white hover:bg-white/10 transition"
           >
-            Start Free Demo
+            Start Now
           </button>
 
           {/* 3. WATCH VIDEO */}
