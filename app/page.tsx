@@ -7,7 +7,7 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
 
-      {/* 🔮 Background Glow */}
+      {/* BACKGROUND GLOW */}
       <div className="absolute inset-0">
         <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-purple-500 opacity-30 blur-[120px] rounded-full" />
         <div className="absolute bottom-[-200px] right-[-100px] w-[500px] h-[500px] bg-blue-500 opacity-20 blur-[120px] rounded-full" />
@@ -34,14 +34,37 @@ export default function LandingPage() {
           AI receptionist that answers calls, books appointments, and manages your clinic 24/7 — without human staff.
         </p>
 
-        <div className="mt-10 flex justify-center gap-4">
-          <button className="px-6 py-3 bg-white text-black rounded-xl font-medium hover:bg-gray-200 transition">
+        {/* ACTION BUTTONS */}
+        <div className="mt-10 flex justify-center gap-4 flex-wrap">
+
+          {/* 1. BOOK DEMO → EMAIL */}
+          <a
+            href="mailto:yourgmail@gmail.com?subject=Demo Request - AI Receptionist&body=Hi, I want to book a demo."
+            className="px-6 py-3 bg-white text-black rounded-xl font-medium hover:bg-gray-200 transition"
+          >
+            Book a Demo
+          </a>
+
+          {/* 2. START FREE DEMO → SCROLL */}
+          <button
+            onClick={() => {
+              const el = document.getElementById("pricing");
+              el?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="px-6 py-3 border border-white/20 rounded-xl text-white hover:bg-white/10 transition"
+          >
             Start Free Demo
           </button>
 
-          <button className="px-6 py-3 border border-white/20 rounded-xl text-white hover:bg-white/10 transition">
+          {/* 3. WATCH VIDEO */}
+          <a
+            href="https://your-video-link.com"
+            target="_blank"
+            className="px-6 py-3 border border-white/20 rounded-xl text-white hover:bg-white/10 transition"
+          >
             Watch How It Works
-          </button>
+          </a>
+
         </div>
       </div>
 
@@ -86,8 +109,8 @@ export default function LandingPage() {
         </div>
       </div>
 
-      {/* PRICING SECTION (REAL COMPONENT) */}
-      <div className="relative z-10 mt-28">
+      {/* PRICING SECTION */}
+      <div id="pricing" className="relative z-10 mt-28">
         <PricingSection />
       </div>
 
