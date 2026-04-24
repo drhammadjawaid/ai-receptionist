@@ -44,7 +44,7 @@ export default function LandingPage() {
       {/* HERO */}
       <div className="relative z-10 text-center mt-20 sm:mt-24 px-6">
 
-        <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight font-[Orbitron]">
           Ready to scale your patient flow?
         </h2>
 
