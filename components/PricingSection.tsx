@@ -74,7 +74,7 @@ export default function PricingSection() {
 
   // 🟢 FINAL CLICK ACTION (WHATSAPP LEAD FUNNEL)
   const handleSelectPlan = (plan: any) => {
-    const phone = "92300XXXXXXX"; // 👉 replace with YOUR number
+    const phone = "923062233194"; // 👉 replace with YOUR number
     const message = `Hi, I am interested in the ${plan.name} plan for AI receptionist.`;
 
     window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, "_blank");
