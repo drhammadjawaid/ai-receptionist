@@ -8,31 +8,28 @@ export default function LandingPage() {
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
 
       {/* BACKGROUND (RESPONSIVE + PREMIUM) */}
-      <div className="absolute inset-0 -z-10">
+      <div className="absolute inset-0 -z-10 overflow-hidden">
 
         {/* BASE GRADIENT */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0a0a0f] to-black" />
-
-        {/* RADIAL DEPTH */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05),transparent_70%)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#050507] via-[#0a0a12] to-black" />
 
         {/* TOP PURPLE GLOW */}
         <div className="absolute 
-          top-[-100px] sm:top-[-200px] 
+          top-[-120px] sm:top-[-180px] 
           left-1/2 -translate-x-1/2 
-          w-[300px] h-[300px] sm:w-[600px] sm:h-[600px] 
-          bg-purple-500/30 
-          blur-[80px] sm:blur-[120px] 
-          rounded-full 
+          w-[400px] h-[400px] sm:w-[700px] sm:h-[700px] 
+          bg-purple-600/60 
+          blur-[90px] sm:blur-[130px] 
+          rounded-full
         " />
 
         {/* BOTTOM BLUE GLOW */}
         <div className="absolute 
-          bottom-[-100px] sm:bottom-[-200px] 
-          right-[-50px] sm:right-[-100px] 
-          w-[250px] h-[250px] sm:w-[500px] sm:h-[500px] 
-          bg-blue-500/20 
-          blur-[80px] sm:blur-[120px] 
+          bottom-[-120px] sm:bottom-[-180px] 
+          right-[-60px] sm:right-[-120px] 
+          w-[300px] h-[300px] sm:w-[550px] sm:h-[550px] 
+          bg-blue-500/50 
+          blur-[90px] sm:blur-[130px] 
           rounded-full 
         " />
 
@@ -123,10 +120,20 @@ export default function LandingPage() {
         ].map((f, i) => (
           <div
             key={i}
-            className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl hover:bg-white/10 transition"
+            className="p-6 rounded-2xl
+            bg-white/5 backdrop-blur-2xl
+            border border-white/10
+            shadow-[0_8px_32px_rgba(0,0,0,0.3)]
+            transition-all duration-300
+            hover:bg-white/10
+            hover:border-white/20
+            hover:shadow-[0_10px_40px_rgba(139,92,246,0.25)]" 
           >
-            <h3 className="text-lg font-semibold">{f.title}</h3>
-            <p className="text-gray-400 mt-2 text-sm">{f.desc}</p>
+            {/* GLASS REFLECTION */}
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-white/5 to-transparent pointer-events-none" />
+            
+            <h3 className="text-lg font-semibold text-white">{f.title}</h3>
+            <p className="text-gray-300 mt-2 text-sm">{f.desc}</p>
           </div>
         ))}
 
