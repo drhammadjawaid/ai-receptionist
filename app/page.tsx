@@ -7,29 +7,32 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
 
-      {/* BACKGROUND (RESPONSIVE + PREMIUM) */}
+      {/* 🌈 ENHANCED BACKGROUND */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
 
         {/* BASE GRADIENT */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#050507] via-[#0a0a12] to-black" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#050507] via-[#0a0a15] to-black" />
 
-        {/* TOP PURPLE GLOW */}
+        {/* CENTER LIGHT */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(139,92,246,0.15),transparent_60%)]" />
+
+        {/* TOP PURPLE */}
         <div className="absolute 
           top-[-120px] sm:top-[-180px] 
           left-1/2 -translate-x-1/2 
           w-[400px] h-[400px] sm:w-[700px] sm:h-[700px] 
           bg-purple-600/60 
-          blur-[90px] sm:blur-[130px] 
+          blur-[120px] 
           rounded-full
         " />
 
-        {/* BOTTOM BLUE GLOW */}
+        {/* BOTTOM BLUE */}
         <div className="absolute 
           bottom-[-120px] sm:bottom-[-180px] 
           right-[-60px] sm:right-[-120px] 
           w-[300px] h-[300px] sm:w-[550px] sm:h-[550px] 
           bg-blue-500/50 
-          blur-[90px] sm:blur-[130px] 
+          blur-[120px] 
           rounded-full 
         " />
 
@@ -38,15 +41,12 @@ export default function LandingPage() {
       {/* NAV */}
       <div className="relative z-10 flex flex-col sm:flex-row justify-between items-center gap-4 px-6 sm:px-10 py-6">
 
-        {/* LEFT BRAND */}
         <h1 className="text-xl font-semibold tracking-tight">
           JAW - Virtual Dental Receptionist
         </h1>
 
-        {/* RIGHT BUTTONS */}
         <div className="flex gap-3 w-full sm:w-auto justify-center sm:justify-end flex-wrap">
 
-          {/* EMAIL */}
           <a
             href="mailto:drhammadjawaid@gmail.com?subject=Book Free Demo - Dental Receptionist&body=Hi, I want a demo."
             className="px-4 py-2 rounded-xl bg-white text-black text-sm font-medium hover:bg-gray-200 transition"
@@ -54,7 +54,6 @@ export default function LandingPage() {
             Book Free Demo
           </a>
 
-          {/* WHATSAPP */}
           <a
             href="https://wa.me/923062233194?text=Hi, I want a demo of your Virtual Dental Receptionist"
             target="_blank"
@@ -74,11 +73,10 @@ export default function LandingPage() {
         </h2>
 
         <p className="text-gray-300 mt-6 text-base sm:text-lg max-w-2xl mx-auto">
-          Meet Jaw, the warm and reliable voice of your practice that greets every patient by name and settles their nerves 24/7. It’s like having a dedicated teammate who never misses a call, perfectly balancing your schedule so you can focus entirely on the patient in your chair.
+          Meet Jaw, the warm and reliable voice of your practice that greets every patient by name and settles their nerves 24/7.
         </p>
 
-        {/* BUTTONS */}
-        <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4 flex-wrap">
+        <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
 
           <button
             onClick={() => {
@@ -105,51 +103,57 @@ export default function LandingPage() {
       <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mt-24 px-6">
 
         {[
-          {
-            title: "Auto Appointment Booking",
-            desc: "AI handles booking, rescheduling, and cancellations instantly."
-          },
-          {
-            title: "Never Miss Calls",
-            desc: "Every call is answered even after clinic hours."
-          },
-          {
-            title: "Smart Scheduling",
-            desc: "Syncs directly with Google Calendar in real-time."
-          }
+          { title: "Auto Booking", desc: "Handles appointments instantly." },
+          { title: "Never Miss Calls", desc: "Answers every call 24/7." },
+          { title: "Smart Scheduling", desc: "Syncs with calendar in real-time." }
         ].map((f, i) => (
           <div
             key={i}
-            className="p-6 rounded-2xl
-            bg-white/5 backdrop-blur-2xl
-            border border-white/10
-            shadow-[0_8px_32px_rgba(0,0,0,0.3)]
-            transition-all duration-300
-            hover:bg-white/10
-            hover:border-white/20
-            hover:shadow-[0_10px_40px_rgba(139,92,246,0.25)]" 
+            className="relative p-6 rounded-2xl 
+            bg-white/5 backdrop-blur-2xl 
+            border border-white/10 
+            shadow-[0_8px_32px_rgba(0,0,0,0.3)] 
+            transition-all duration-300 
+            hover:bg-white/10 
+            hover:border-white/20 
+            hover:shadow-[0_10px_40px_rgba(139,92,246,0.25)]"
           >
-            {/* GLASS REFLECTION */}
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-white/5 to-transparent pointer-events-none" />
-            
-            <h3 className="text-lg font-semibold text-white">{f.title}</h3>
+
+            <h3 className="text-lg font-semibold">{f.title}</h3>
             <p className="text-gray-300 mt-2 text-sm">{f.desc}</p>
           </div>
         ))}
 
       </div>
 
-      {/* HOW IT WORKS */}
+      {/* 🔥 HOW IT WORKS (FLOW STYLE) */}
       <div className="relative z-10 text-center mt-28 px-6">
-        <h2 className="text-3xl font-semibold">How it works</h2>
 
-        <div className="mt-10 max-w-3xl mx-auto text-gray-300 space-y-3 text-sm">
-          <p>1. Patient calls your clinic number</p>
-          <p>2. AI answers instantly (no missed calls)</p>
-          <p>3. Detects intent (book / cancel / reschedule)</p>
-          <p>4. Updates Google Calendar automatically</p>
-          <p>5. Sends confirmation to patient</p>
+        <h2 className="text-3xl font-semibold mb-12">How it works</h2>
+
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+
+          {[
+            "Patient Calls",
+            "AI Answers",
+            "Understands Request",
+            "Books Appointment",
+            "Confirmation Sent"
+          ].map((step, i) => (
+            <React.Fragment key={i}>
+              <div className="px-5 py-3 rounded-xl bg-white/5 border border-white/10 backdrop-blur-xl text-sm">
+                {step}
+              </div>
+
+              {i !== 4 && (
+                <div className="text-gray-500 text-xl hidden md:block">→</div>
+              )}
+            </React.Fragment>
+          ))}
+
         </div>
+
       </div>
 
       {/* PRICING */}
@@ -159,7 +163,7 @@ export default function LandingPage() {
 
       {/* FOOTER */}
       <div className="relative z-10 text-center text-gray-500 text-xs mt-32 pb-10">
-        © 2026 JAW - Dental Receptionist. All rights reserved.
+        © 2026 JAW - Dental Receptionist
       </div>
 
     </div>
