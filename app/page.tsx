@@ -18,7 +18,7 @@ export default function LandingPage() {
 
         {/* LEFT BRAND */}
         <h1 className="text-xl font-semibold tracking-tight">
-          Dental Receptionist
+          JAW - Virtual Dental Receptionist
         </h1>
 
         {/* RIGHT BUTTONS */}
@@ -127,7 +127,7 @@ export default function LandingPage() {
 
       {/* FOOTER */}
       <div className="relative z-10 text-center text-gray-500 text-xs mt-32 pb-10">
-        © 2026 Dental Receptionist. All rights reserved.
+        © 2026 JAW - Dental Receptionist. All rights reserved.
       </div>
 
     </div>
