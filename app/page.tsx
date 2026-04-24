@@ -7,22 +7,35 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen text-white relative overflow-hidden bg-black">
 
-      {/* 🍏 APPLE-STYLE BACKGROUND */}
+      {/* 🔥 PREMIUM VIBRANT BACKGROUND */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
-
+        
         {/* BASE */}
-        <div className="absolute inset-0 bg-[#000]" />
+        <div className="absolute inset-0 bg-[#020204]" />
 
-        {/* SOFT LIGHT CENTER */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(120,120,255,0.15),transparent_60%)]" />
+        {/* PURPLE CORE LIGHT */}
+        <div className="absolute 
+        top-[10%] left-1/2 -translate-x-1/2 
+        w-[500px] h-[500px] sm:w-[800px] sm:h-[800px] 
+        bg-purple-600/40 
+        blur-[120px] sm:blur-[160px] 
+        rounded-full" 
+      />
 
-        {/* DEPTH GRADIENT */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0a0a0a] to-black opacity-90" />
+        {/* BLUE SIDE LIGHT */}
+        <div className="absolute 
+        bottom-[0%] right-[10%] 
+        w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] 
+        bg-blue-500/30 
+        blur-[100px] sm:blur-[140px] 
+        rounded-full" 
+      />
 
-        {/* SUBTLE COLOR HINT */}
-        <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-purple-500/20 blur-[160px] rounded-full" />
+        {/* GRADIENT OVERLAY */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/40 to-black" />
 
       </div>
+
 
       {/* NAV */}
       <div className="relative z-10 flex flex-col sm:flex-row justify-between items-center gap-4 px-6 sm:px-10 py-6">
@@ -58,13 +71,12 @@ export default function LandingPage() {
       {/* HERO */}
       <div className="relative z-10 text-center mt-24 px-6">
 
-        <h2 className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight">
-          Never miss a patient call again
+        <h2 className="text-3xl font-semibold mb-12">
+          Ready to scale your patient flow?
         </h2>
 
         <p className="text-gray-400 mt-6 text-lg max-w-2xl mx-auto leading-relaxed">
-          A calm, reliable AI receptionist that answers calls, books appointments,
-          and keeps your clinic running smoothly — 24/7.
+          Meet Jaw, the warm and reliable voice of your practice that greets every patient by name and settles their nerves 24/7. It’s like having a dedicated teammate who never misses a call, perfectly balancing your schedule so you can focus entirely on the patient in your chair.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
@@ -113,33 +125,51 @@ export default function LandingPage() {
         ))}
 
       </div>
+      
+      {/* 🔄 HOW IT WORKS */}
+      <div className="relative z-10 text-center mt-28 px-6">
+        
+        <h2 className="text-3xl font-semibold mb-12">
+          How it works
+        </h2>
 
-      {/* 🔄 HOW IT WORKS (APPLE STYLE FLOW) */}
-      <div className="relative z-10 text-center mt-32 px-6">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
 
-        <h2 className="text-3xl font-semibold mb-12">How it works</h2>
-
-        <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
-
-          {[
-            "Patient Calls",
-            "AI Answers",
-            "Understands Request",
-            "Books Appointment",
-            "Confirmation Sent"
-          ].map((step, i) => (
-            <div
-              key={i}
-              className="px-5 py-2 rounded-full bg-white/5 border border-white/10 
-              text-sm text-gray-300 backdrop-blur-md"
+        {[
+          "Patient Calls",
+          "AI Answers",
+          "Understands Intent",
+          "Books / Reschedules",
+          "Confirmation Sent"
+        ].map((step, i) => (
+          <React.Fragment key={i}>
+            
+            {/* STEP */}
+            <div className="px-5 py-3 rounded-xl 
+              bg-white/5 backdrop-blur-xl 
+              border border-white/10 
+              text-sm text-gray-200 
+              min-w-[140px] text-center"
             >
               {step}
             </div>
-          ))}
 
-        </div>
-
+            {/* ARROW */}
+            {i !== 4 && (
+              <div className="text-gray-500 text-xl">
+                →
+              </div>
+            )}
+            
+          </React.Fragment>
+        ))}
+      
       </div>
+  
+    </div>
+
+
+
 
       {/* PRICING */}
       <div id="pricing" className="relative z-10 mt-28">
