@@ -7,38 +7,29 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
 
-      {/* 🌈 ENHANCED BACKGROUND */}
-      <div className="absolute inset-0">
-        <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-purple-500 opacity-30 blur-[120px] rounded-full" />
-        <div className="absolute bottom-[-200px] right-[-100px] w-[500px] h-[500px] bg-blue-500 opacity-20 blur-[120px] rounded-full" />
       
-        {/* BASE GRADIENT */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#050507] via-[#0a0a15] to-black" />
+        {/* 🌑 MINIMAL APPLE-STYLE BACKGROUND */}
+        <div className="absolute inset-0 -z-10 overflow-hidden">
+          
+          {/* BASE DARK */}
+          <div className="absolute inset-0 bg-[#050505]" />
 
-        {/* CENTER LIGHT */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(139,92,246,0.15),transparent_60%)]" />
+          {/* VERY SUBTLE CENTER LIGHT */}
+          <div className="absolute inset-0 
+            bg-[radial-gradient(circle_at_50%_30%,rgba(255,255,255,0.06),transparent_60%)]" 
+          />
 
-        {/* TOP PURPLE */}
-        <div className="absolute 
-          top-[-120px] sm:top-[-180px] 
-          left-1/2 -translate-x-1/2 
-          w-[400px] h-[400px] sm:w-[700px] sm:h-[700px] 
-          bg-purple-600/60 
-          blur-[120px] 
-          rounded-full
-        " />
-
-        {/* BOTTOM BLUE */}
-        <div className="absolute 
-          bottom-[-120px] sm:bottom-[-180px] 
-          right-[-60px] sm:right-[-120px] 
-          w-[300px] h-[300px] sm:w-[550px] sm:h-[550px] 
-          bg-blue-500/50 
-          blur-[120px] 
-          rounded-full 
-          " />
-        
+          {/* SOFT BLUE DEPTH (VERY LOW OPACITY) */}
+          <div className="absolute 
+            top-[-150px] left-1/2 -translate-x-1/2 
+            w-[600px] h-[600px] 
+            bg-blue-500/10 
+            blur-[140px] 
+            rounded-full" 
+          />
         </div>
+      
+    
       
         {/* NAV */}
       <div className="relative z-10 flex flex-col sm:flex-row justify-between items-center gap-4 px-6 sm:px-10 py-6">
