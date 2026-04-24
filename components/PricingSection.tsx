@@ -105,11 +105,11 @@ export default function PricingSection() {
 
         {/* HEADER */}
         <h1 className="text-4xl font-bold mb-3">
-          Ready to scale your patient flow?
+          Sync · Screen · Schedule · Secure · Smile
         </h1>
 
         <p className="text-gray-300 mb-2">
-          AI receptionist that never misses a call
+          Choose Your Package
         </p>
 
         <p className="text-sm text-gray-400 mb-1">
