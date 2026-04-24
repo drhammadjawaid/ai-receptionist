@@ -105,8 +105,8 @@ export default function LandingPage() {
           >
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-white/5 to-transparent pointer-events-none" />
 
-            <h3 className="text-xl md:text-2xl font-semibold">{f.title}</h3>
-            <p className="text-gray-300 mt-3 text-base md:text-lg">{f.desc}</p>
+            <h3 className="text-lg font-semibold">{f.title}</h3>
+            <p className="text-gray-400 mt-2 text-sm">{f.desc}</p>
           </div>
         ))}
 
