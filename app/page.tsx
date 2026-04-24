@@ -7,10 +7,35 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
 
-      {/* BACKGROUND GLOW */}
-      <div className="absolute inset-0">
-        <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-purple-500 opacity-30 blur-[120px] rounded-full" />
-        <div className="absolute bottom-[-200px] right-[-100px] w-[500px] h-[500px] bg-blue-500 opacity-20 blur-[120px] rounded-full" />
+      {/* BACKGROUND (RESPONSIVE + PREMIUM) */}
+      <div className="absolute inset-0 -z-10">
+
+        {/* BASE GRADIENT */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0a0a0f] to-black" />
+
+        {/* RADIAL DEPTH */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05),transparent_70%)]" />
+
+        {/* TOP PURPLE GLOW */}
+        <div className="absolute 
+          top-[-100px] sm:top-[-200px] 
+          left-1/2 -translate-x-1/2 
+          w-[300px] h-[300px] sm:w-[600px] sm:h-[600px] 
+          bg-purple-500/30 
+          blur-[80px] sm:blur-[120px] 
+          rounded-full 
+        " />
+
+        {/* BOTTOM BLUE GLOW */}
+        <div className="absolute 
+          bottom-[-100px] sm:bottom-[-200px] 
+          right-[-50px] sm:right-[-100px] 
+          w-[250px] h-[250px] sm:w-[500px] sm:h-[500px] 
+          bg-blue-500/20 
+          blur-[80px] sm:blur-[120px] 
+          rounded-full 
+        " />
+
       </div>
 
       {/* NAV */}
