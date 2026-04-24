@@ -47,11 +47,11 @@ export default function LandingPage() {
       {/* HERO */}
       <div className="relative z-10 text-center mt-24 px-6">
         <h2 className="text-5xl md:text-6xl font-bold leading-tight">
-          Virtual Dental Receptionist
+          Ready to scale your patient flow?
         </h2>
 
         <p className="text-gray-300 mt-6 text-lg max-w-2xl mx-auto">
-          AI receptionist that answers calls, books appointments, and manages your clinic 24/7 — without human staff.
+          Meet Adam, the warm and reliable voice of your dental practice that greets every patient by name and settles their nerves 24/7. It’s like having a dedicated teammate who never misses a call, perfectly balancing your schedule so you can focus entirely on the person in your chair.
         </p>
 
         {/* ACTION BUTTONS */}
