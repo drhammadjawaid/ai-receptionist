@@ -51,7 +51,7 @@ export default function LandingPage() {
         </h2>
 
         <p className="text-gray-300 mt-6 text-lg max-w-2xl mx-auto">
-          Meet Adam, the warm and reliable voice of your dental practice that greets every patient by name and settles their nerves 24/7. It’s like having a dedicated teammate who never misses a call, perfectly balancing your schedule so you can focus entirely on the person in your chair.
+          Meet Adam, the warm and reliable voice of your dental practice that greets every patient by name and settles their nerves 24/7. It’s like having a dedicated teammate who never misses a call, perfectly balancing your schedule so you can focus entirely on the patient in your chair.
         </p>
 
         {/* ACTION BUTTONS */}
