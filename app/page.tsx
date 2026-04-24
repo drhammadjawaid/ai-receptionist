@@ -14,7 +14,7 @@ export default function LandingPage() {
       </div>
 
       {/* NAV */}
-      <div className="relative z-10 flex justify-between items-center px-10 py-6">
+      <div className="relative z-10 flex flex-col sm:flex-row justify-between items-center gap-4 px-6 sm:px-10 py-6">
 
         {/* LEFT BRAND */}
         <h1 className="text-xl font-semibold tracking-tight">
@@ -22,17 +22,17 @@ export default function LandingPage() {
         </h1>
 
         {/* RIGHT BUTTONS */}
-        <div className="flex gap-3">
+        <div className="flex gap-3 w-full sm:w-auto justify-center sm:justify-end flex-wrap">
 
-          {/* EMAIL BUTTON */}
+          {/* EMAIL */}
           <a
-            href="mailto:drhammadjawaid@gmail.com?subject=Book Free Demo - Dental Receptionist&body=Hi, I want to book a free demo."
+            href="mailto:drhammadjawaid@gmail.com?subject=Book Free Demo - Dental Receptionist&body=Hi, I want a demo."
             className="px-4 py-2 rounded-xl bg-white text-black text-sm font-medium hover:bg-gray-200 transition"
           >
             Book Free Demo
           </a>
 
-          {/* WHATSAPP BUTTON */}
+          {/* WHATSAPP */}
           <a
             href="https://wa.me/923062233194?text=Hi, I want a demo of your Virtual Dental Receptionist"
             target="_blank"
@@ -45,19 +45,19 @@ export default function LandingPage() {
       </div>
 
       {/* HERO */}
-      <div className="relative z-10 text-center mt-24 px-6">
-        <h2 className="text-5xl md:text-6xl font-bold leading-tight">
-          Ready to scale your patient flow?
+      <div className="relative z-10 text-center mt-20 sm:mt-24 px-6">
+
+        <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
+          Virtual Dental Receptionist
         </h2>
 
-        <p className="text-gray-300 mt-6 text-lg max-w-2xl mx-auto">
-          Meet Adam, the warm and reliable voice of your dental practice that greets every patient by name and settles their nerves 24/7. It’s like having a dedicated teammate who never misses a call, perfectly balancing your schedule so you can focus entirely on the patient in your chair.
+        <p className="text-gray-300 mt-6 text-base sm:text-lg max-w-2xl mx-auto">
+          AI receptionist that answers calls, books appointments, and manages your clinic 24/7 — without human staff.
         </p>
 
-        {/* ACTION BUTTONS */}
-        <div className="mt-10 flex justify-center gap-4 flex-wrap">
+        {/* BUTTONS */}
+        <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4 flex-wrap">
 
-          {/* SCROLL TO PRICING */}
           <button
             onClick={() => {
               const el = document.getElementById("pricing");
@@ -68,7 +68,6 @@ export default function LandingPage() {
             Start Now
           </button>
 
-          {/* VIDEO */}
           <a
             href="https://your-video-link.com"
             target="_blank"
@@ -81,7 +80,7 @@ export default function LandingPage() {
       </div>
 
       {/* FEATURES */}
-      <div className="relative z-10 grid md:grid-cols-3 gap-6 max-w-6xl mx-auto mt-24 px-6">
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mt-24 px-6">
 
         {[
           {
@@ -122,7 +121,7 @@ export default function LandingPage() {
       </div>
 
       {/* PRICING */}
-      <div id="pricing" className="relative z-10 mt-28">
+      <div id="pricing" className="relative z-10 mt-20 sm:mt-28">
         <PricingSection />
       </div>
 
