@@ -11,8 +11,7 @@ export default function LandingPage() {
       <div className="absolute inset-0">
         <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-purple-500 opacity-30 blur-[120px] rounded-full" />
         <div className="absolute bottom-[-200px] right-[-100px] w-[500px] h-[500px] bg-blue-500 opacity-20 blur-[120px] rounded-full" />
-      </div>
-
+      
         {/* BASE GRADIENT */}
         <div className="absolute inset-0 bg-gradient-to-br from-[#050507] via-[#0a0a15] to-black" />
 
@@ -37,11 +36,11 @@ export default function LandingPage() {
           bg-blue-500/50 
           blur-[120px] 
           rounded-full 
-        " />
-
-      </div>
-
-      {/* NAV */}
+          " />
+        
+        </div>
+      
+        {/* NAV */}
       <div className="relative z-10 flex flex-col sm:flex-row justify-between items-center gap-4 px-6 sm:px-10 py-6">
 
         <h1 className="text-xl font-semibold tracking-tight">
