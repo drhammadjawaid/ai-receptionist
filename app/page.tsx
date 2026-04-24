@@ -15,25 +15,39 @@ export default function LandingPage() {
 
       {/* NAV */}
       <div className="relative z-10 flex justify-between items-center px-10 py-6">
+
+        {/* LEFT BRAND */}
         <h1 className="text-xl font-semibold tracking-tight">
-          AI Receptionist
+          Dental Receptionist
         </h1>
 
-        <button
-          onClick={() => {
-            window.location.href =
-              "mailto:drhammadjawaid@gmail.com?subject=Demo Request - AI Receptionist&body=Hi, I want to book a demo.";
-          }}
-          className="px-4 py-2 rounded-xl bg-white text-black text-sm font-medium hover:bg-gray-200 transition"
-        >
-          Book Demo
-        </button>
+        {/* RIGHT BUTTONS */}
+        <div className="flex gap-3">
+
+          {/* EMAIL BUTTON */}
+          <a
+            href="mailto:drhammadjawaid@gmail.com?subject=Book Free Demo - Dental Receptionist&body=Hi, I want to book a free demo."
+            className="px-4 py-2 rounded-xl bg-white text-black text-sm font-medium hover:bg-gray-200 transition"
+          >
+            Book Free Demo
+          </a>
+
+          {/* WHATSAPP BUTTON */}
+          <a
+            href="https://wa.me/923062233194?text=Hi, I want a demo of your Virtual Dental Receptionist"
+            target="_blank"
+            className="px-4 py-2 rounded-xl bg-green-500 text-black text-sm font-medium hover:bg-green-400 transition"
+          >
+            WhatsApp
+          </a>
+
+        </div>
       </div>
 
       {/* HERO */}
-      <div className="relative z-10 text-center mt-20 px-6">
+      <div className="relative z-10 text-center mt-24 px-6">
         <h2 className="text-5xl md:text-6xl font-bold leading-tight">
-          Never miss a patient call again
+          Virtual Dental Receptionist
         </h2>
 
         <p className="text-gray-300 mt-6 text-lg max-w-2xl mx-auto">
@@ -42,23 +56,6 @@ export default function LandingPage() {
 
         {/* ACTION BUTTONS */}
         <div className="mt-10 flex justify-center gap-4 flex-wrap">
-
-          {/* EMAIL FUNNEL */}
-          <a
-            href="mailto:drhammadjawaid@gmail.com?subject=Demo Request - AI Receptionist&body=Hi, I want to book a demo."
-            className="px-6 py-3 bg-white text-black rounded-xl font-medium hover:bg-gray-200 transition"
-          >
-            Book Demo (Email)
-          </a>
-
-          {/* WHATSAPP FUNNEL */}
-          <a
-            href="https://wa.me/92300XXXXXXX?text=Hi, I want a demo of your AI receptionist system"
-            target="_blank"
-            className="px-6 py-3 bg-green-500 text-black rounded-xl font-medium hover:bg-green-400 transition"
-          >
-            Chat on WhatsApp
-          </a>
 
           {/* SCROLL TO PRICING */}
           <button
@@ -131,7 +128,7 @@ export default function LandingPage() {
 
       {/* FOOTER */}
       <div className="relative z-10 text-center text-gray-500 text-xs mt-32 pb-10">
-        © 2026 AI Receptionist. All rights reserved.
+        © 2026 Dental Receptionist. All rights reserved.
       </div>
 
     </div>
