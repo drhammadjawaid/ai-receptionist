@@ -44,9 +44,10 @@ export default function LandingPage() {
       {/* HERO */}
       <div className="relative z-10 text-center mt-20 sm:mt-24 px-6">
 
-        <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
+        <h2 className={`${syne.className} text-4xl sm:text-5xl md:text-6xl font-bold leading-tight`}>
           Ready to scale your patient flow?
         </h2>
+  
 
         <p className="text-gray-300 mt-6 text-base sm:text-lg max-w-2xl mx-auto">
           Meet Jaw, the warm and reliable voice of your practice that greets every patient by name and settles their nerves 24/7. It’s like having a dedicated teammate who never misses a call, perfectly balancing your schedule so you can focus entirely on the patient in your chair.
